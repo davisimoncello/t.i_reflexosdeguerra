@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site - Pagamento Confirmado</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .confirmation {
+            background-color: #fff;
+            text-align: center;
+            padding: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .material-icons {
+            font-size: 48px;
+            color: green;
+            margin-bottom: 20px;
+        }
+        img {
+            width: 20%;
+            height: 20%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="assets/logo.png" alt="Logo">
+    </header>
+    <main class="confirmation">
+        <h2>Pagamento Confirmado!</h2>
+        <p>Obrigado pela sua doação.</p>
+        <span class="material-icons">done</span>
+    </main>
+    <script>
+        // Simular o processamento e redirecionar após 3 segundos
+        setTimeout(function() {
+            window.location.href = "pagamento_confirmado.html";
+        }, 3000);
+    </script>
+</body>
+</html>

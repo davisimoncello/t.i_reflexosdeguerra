@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site - Pagamento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .payment {
+            background-color: #fff;
+            text-align: center;
+            padding: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .material-icons {
+            font-size: 48px;
+            color: green;
+            margin-bottom: 20px;
+        }
+        .back-button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .back-button:hover {
+            background-color: #555;
+        }
+        img {
+            width: 20%;
+            height: 20%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="assets/logo.png" alt="Logo">
+    </header>
+    <main class="payment">
+        <h2>Confirmação de Pagamento</h2>
+        <p>Insira sua chave PIX e o valor da doação:</p>
+        <form action="pagamento-confirmado.html" method="post">
+            <input type="text" name="chave_pix" placeholder="Chave PIX" required>
+            <input type="number" name="valor_doacao" placeholder="Valor da Doação (R$)" required>
+            <input type="submit" value="Confirmar Pagamento">
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        section {
+            padding: 20px;
+        }
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 800px; /* Defina a largura máxima do carrossel */
+            margin: 0 auto;
+        }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .carousel img {
+            width: 100%; /* As imagens ocupam toda a largura do contêiner */
+            height: auto;
+            object-fit: cover; /* Mantém a proporção da imagem sem distorcer */
+        }
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            z-index: 1;
+        }
+        .carousel-btn.prev {
+            left: 0;
+        }
+        .carousel-btn.next {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="assets/logo.png" alt="Logo">
+    </header>
+    <section>
+        <h2></h2>
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="assets/1.png" alt="Photo 1">
+                <img src="assets/2.png" alt="Photo 2">
+                <img src="assets/3.png" alt="Photo 3">
+            </div>
+            <button class="carousel-btn prev" onclick="moveCarousel(-1)">‹</button>
+            <button class="carousel-btn next" onclick="moveCarousel(1)">›</button>
+        </div>
+    </section>
+    <section class="donation">
+        <h2>Faça uma Doação</h2>
+        <p>Se você gostou do nosso site, considere fazer uma doação para nos ajudar a mantê-lo funcionando.</p>
+        <button><a href="doacao.html" class="donate-link">Faça uma Doação</a></button>
+    </section>
+
+    <script>
+        let carouselIndex = 0;
+        const moveCarousel = (direction) => {
+            const carousel = document.querySelector('.carousel');
+            const carouselWidth = carousel.clientWidth;
+            const maxIndex = carousel.children.length - 1;
+
+            carouselIndex = Math.min(Math.max(carouselIndex + direction, 0), maxIndex);
+
+            carousel.style.transform = `translateX(-${carouselIndex * carouselWidth}px)`;
+        };
+    </script>
+</body>
+</html>
